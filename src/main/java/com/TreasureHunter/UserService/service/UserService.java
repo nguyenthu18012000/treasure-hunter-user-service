@@ -1,11 +1,10 @@
 package com.TreasureHunter.UserService.service;
 
-
-import com.TreasureHunter.UserService.pojo.dto.request.auth.RegisterRequestDTO;
-import com.TreasureHunter.UserService.pojo.dto.response.auth.LoginResponseDTO;
+import com.TreasureHunter.CommonLib.dto.request.auth.RegisterRequestDTO;
+import com.TreasureHunter.CommonLib.dto.response.user.UserResponseDTO;
 
 public interface UserService {
     void register(RegisterRequestDTO request);
 
-    LoginResponseDTO login(String username, String password);
+    UserResponseDTO login(String username, String password);
 }

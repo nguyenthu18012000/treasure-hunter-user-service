@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.TreasureHunter</groupId>
-	<artifactId>UserServce</artifactId>
+	<artifactId>UserService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>UserService</name>
 	<description>User service</description>
@@ -125,7 +125,20 @@
 			<artifactId>lombok</artifactId>
 			<version>1.18.40</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.github.nguyenthu18012000</groupId>
+			<artifactId>treasure-hunter-common-lib</artifactId>
+			<version>1.0.2</version>
+		</dependency>
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+	</repositories>
 
 	<build>
 		<plugins>
