@@ -1,8 +1,10 @@
 package com.TreasureHunter.UserService.controller;
 
+import com.TreasureHunter.CommonLib.constant.CommonConstant;
 import com.TreasureHunter.CommonLib.dto.request.auth.LoginRequestDTO;
 import com.TreasureHunter.CommonLib.dto.request.auth.RegisterRequestDTO;
 import com.TreasureHunter.CommonLib.dto.response.user.UserResponseDTO;
+import com.TreasureHunter.CommonLib.response.BaseResponse;
 import com.TreasureHunter.UserService.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -23,7 +25,12 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public UserResponseDTO login(@Valid() @RequestBody() LoginRequestDTO request) {
-        return userService.login(request.getUsername(), request.getPassword());
+    public BaseResponse<UserResponseDTO> login(@Valid() @RequestBody() LoginRequestDTO request) {
+        UserResponseDTO user = userService.login(request.getUsername(), request.getPassword());
+        return new BaseResponse<>(
+                CommonConstant.RESPONSE_CODE.SUCCESS,
+                CommonConstant.RESPONSE_MESSAGE.SUCCESS,
+                user
+        );
     }
 }
