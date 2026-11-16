@@ -1,4 +1,4 @@
-package com.TreasureHunter.UserService.config;
+package com.game.user.config;
 
 import org.jooq.DSLContext;
 import org.jooq.SQLDialect;

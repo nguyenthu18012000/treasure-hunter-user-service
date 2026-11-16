@@ -5,7 +5,7 @@ spring:
   application:
     name: user-service
   datasource:
-    url: jdbc:postgresql://localhost:5432/treasure_hunter
+    url: jdbc:postgresql://localhost:5432/game
     username: postgres
     password: 123456
     driver-class-name: org.postgresql.Driver

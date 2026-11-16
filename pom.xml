@@ -8,7 +8,7 @@
 		<version>3.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.TreasureHunter</groupId>
+	<groupId>com.game</groupId>
 	<artifactId>UserService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>UserService</name>
@@ -128,8 +128,8 @@
 
 		<dependency>
 			<groupId>com.github.nguyenthu18012000</groupId>
-			<artifactId>treasure-hunter-common-lib</artifactId>
-			<version>1.0.11</version>
+			<artifactId>common-lib</artifactId>
+			<version>1.0.14-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
@@ -150,6 +150,7 @@
 			<plugin>
 				<groupId>org.jooq</groupId>
 				<artifactId>jooq-codegen-maven</artifactId>
+				<version>${jooq.version}</version>
 				<executions>
 					<execution>
 						<id>generate-jooq-code</id>
@@ -160,7 +161,7 @@
 						<configuration>
 							<jdbc>
 								<driver>org.postgresql.Driver</driver>
-								<url>jdbc:postgresql://localhost:5432/treasure_hunter</url>
+								<url>jdbc:postgresql://localhost:5432/game</url>
 								<user>postgres</user>
 								<password>123456</password>
 							</jdbc>
@@ -184,6 +185,26 @@
 			</plugin>
 
 			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>3.6.0</version>
+				<executions>
+					<execution>
+						<id>add-jooq-generated-sources</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>target/generated-sources/jooq</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.14.0</version>
@@ -201,19 +222,6 @@
 			</plugin>
 		</plugins>
 
-		<resources>
-			<resource>
-				<directory>target/generated-sources/jooq</directory>
-			</resource>
-			<resource>
-				<directory>src/main/resources</directory>
-				<includes>
-					<include>**/*.yml</include>
-					<include>**/*.yaml</include>
-					<include>**/*.properties</include>
-				</includes>
-			</resource>
-		</resources>
 	</build>
 
 </project>

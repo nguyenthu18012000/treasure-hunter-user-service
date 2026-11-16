@@ -1,11 +1,11 @@
-package com.TreasureHunter.UserService.service.implement;
+package com.game.user.service.implement;
 
-import com.TreasureHunter.CommonLib.dto.request.auth.RegisterRequestDTO;
-import com.TreasureHunter.CommonLib.dto.response.user.UserResponseDTO;
-import com.TreasureHunter.CommonLib.exception.CommonException;
-import com.TreasureHunter.UserService.pojo.entity.postgres.UserEntity;
-import com.TreasureHunter.UserService.postgres.UserRepository;
-import com.TreasureHunter.UserService.service.UserService;
+import com.game.common.dto.request.auth.RegisterRequestDTO;
+import com.game.common.dto.response.user.UserResponseDTO;
+import com.game.common.exception.CommonException;
+import com.game.user.pojo.entity.postgres.UserEntity;
+import com.game.user.postgres.UserRepository;
+import com.game.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

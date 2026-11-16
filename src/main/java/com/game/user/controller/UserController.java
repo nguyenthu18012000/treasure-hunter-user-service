@@ -1,11 +1,11 @@
-package com.TreasureHunter.UserService.controller;
+package com.game.user.controller;
 
-import com.TreasureHunter.CommonLib.constant.CommonConstant;
-import com.TreasureHunter.CommonLib.dto.request.auth.LoginRequestDTO;
-import com.TreasureHunter.CommonLib.dto.request.auth.RegisterRequestDTO;
-import com.TreasureHunter.CommonLib.dto.response.user.UserResponseDTO;
-import com.TreasureHunter.CommonLib.response.BaseResponse;
-import com.TreasureHunter.UserService.service.UserService;
+import com.game.common.constant.CommonConstant;
+import com.game.common.dto.request.auth.LoginRequestDTO;
+import com.game.common.dto.request.auth.RegisterRequestDTO;
+import com.game.common.dto.response.user.UserResponseDTO;
+import com.game.common.response.BaseResponse;
+import com.game.user.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;

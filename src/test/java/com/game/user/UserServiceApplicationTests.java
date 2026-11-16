@@ -1,4 +1,4 @@
-package com.TreasureHunter.UserService;
+package com.game.user;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

@@ -1,4 +1,4 @@
-package com.TreasureHunter.UserService.config;
+package com.game.user.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

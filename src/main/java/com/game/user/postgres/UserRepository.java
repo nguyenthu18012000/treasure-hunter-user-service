@@ -1,6 +1,6 @@
-package com.TreasureHunter.UserService.postgres;
+package com.game.user.postgres;
 
-import com.TreasureHunter.UserService.pojo.entity.postgres.UserEntity;
+import com.game.user.pojo.entity.postgres.UserEntity;
 import lombok.RequiredArgsConstructor;
 import org.jooq.DSLContext;
 import org.springframework.stereotype.Service;

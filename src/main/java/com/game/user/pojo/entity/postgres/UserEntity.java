@@ -1,4 +1,4 @@
-package com.TreasureHunter.UserService.pojo.entity.postgres;
+package com.game.user.pojo.entity.postgres;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
